@@ -35,6 +35,8 @@ git config用于编辑配置文件，跟--system选项编辑的是level1，跟--
 git config --global user.name "albert"
 git config --global user.email albert@163.com
 
+git config --list用于列出当前配置
+
 
 # 操作
 ## 查看两个版本之间修改了哪些文件（只列出文件名，不展示细节）
