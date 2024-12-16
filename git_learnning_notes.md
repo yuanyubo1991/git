@@ -98,9 +98,20 @@ doc/**/*.pdf
 ## git commit
 git commit -a -m 'added new benchmarks'
 
+git commit --amend用于覆盖上次提交
+
 ## git rm
 从已跟踪文件清单中移除（确切地说，是从暂存区域移除），并连带从工作目录中删除指定的文件.
 如果要删除之前修改过或已经放到暂存区的文件，则必须使用强制删除选项 -f（译注：即 force 的首字母）。 这是一种安全特性，用于防止误删尚未添加到快照的数据.
+另外一种情况是，我们想把文件从 Git 仓库中删除（亦即从暂存区域移除），但仍然希望保留在当前工作目录中。 换句话说，你想让文件保留在磁盘，但是并不想让 Git 继续跟踪。 当你忘记添加 .gitignore 文件，不小心把一个很大的日志文件或一堆 .a 这样的编译生成文件添加到暂存区时，这一做法尤其有用。 为达到这一目的，使用 --cached 选项：git rm --cached README
 
+## git push
+git push origin master将当前clone下来的仓库master分支push到远程服务器仓库（名字简称是origin）的master分支。如果遇到没有权限push的话，使用git config receive.denyCurrentBranch ignore对服务器仓库进行配置
+
+## git remote
+查看远程服务器仓库名字，如果当前仓库是通过git clone得到，则远程服务器仓库会自动被命名为origin。可以使用git remote rename origin xxx将远程服务器仓库名字从origin修改成xxx
+
+## git tag
+先把当前所有的改动都提交，然后使用git tag -a xxx -m "yyy"，将这次提交打了个标签xxx，这个标签的描述是yyy
 
 
