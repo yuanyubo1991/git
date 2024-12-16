@@ -112,6 +112,7 @@ git push origin master将当前clone下来的仓库master分支push到远程服�
 查看远程服务器仓库名字，如果当前仓库是通过git clone得到，则远程服务器仓库会自动被命名为origin。可以使用git remote rename origin xxx将远程服务器仓库名字从origin修改成xxx
 
 ## git tag
-先把当前所有的改动都提交，然后使用git tag -a xxx -m "yyy"，将这次提交打了个标签xxx，这个标签的描述是yyy
+先把当前所有的改动都提交，然后使用git tag -a xxx -m "yyy"，将这次提交打了个标签xxx，这个标签的描述是yyy。
+git push的时候不会把标签push到远程服务器仓库，如果想push这个标签，需要额外执行git push origin xxx
 
 
