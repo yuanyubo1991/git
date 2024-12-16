@@ -39,6 +39,14 @@ git config --list用于列出当前配置
 
 
 # 操作
+## 创建
+git init初始化
+git add添加文件
+git commit提交
+
+## 克隆
+git clone https://github.com/libgit2/libgit2 mylibgit
+
 ## 查看两个版本之间修改了哪些文件（只列出文件名，不展示细节）
 git diff --name-status xxxxxxxxx yyyyyyyyy
 
