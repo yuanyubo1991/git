@@ -53,4 +53,25 @@ git diff --name-status xxxxxxxxx yyyyyyyyy
 ## 回退到某个版本
 git reset --hard xxxxxxxxxx
 
+## git add
+这是个多功能命令：可以用它开始跟踪新文件，或者把已跟踪的文件放到暂存区，还能用于合并时把有冲突的文件标记为已解决状态等。
+运行了 git add 之后又作了修订的文件，需要重新运行 git add 把最新版本重新暂存起来。
+git add 命令使用文件或目录的路径作为参数；如果参数是目录的路径，该命令将递归地跟踪该目录下的所有文件
+
+## .gitignore
+一般我们总会有些文件无需纳入 Git 的管理，也不希望它们总出现在未跟踪文件列表。 通常都是些自动生成的文件，比如日志文件，或者编译过程中创建的临时文件等。 在这种情况下，我们可以创建一个名为 .gitignore的文件，列出要忽略的文件的模式。
+一个 .gitignore 文件的例子：
+\# 忽略所有的 .a 文件
+*.a
+\# 但跟踪所有的 lib.a，即便你在前面忽略了 .a 文件
+!lib.a
+\# 只忽略当前目录下的 TODO 文件，而不忽略 subdir/TODO
+/TODO
+\# 忽略任何目录下名为 build 的文件夹
+build/
+\# 忽略 doc/notes.txt，但不忽略 doc/server/arch.txt
+doc/*.txt
+\# 忽略 doc/ 目录及其所有子目录下的 .pdf 文件
+doc/**/*.pdf
+
 
